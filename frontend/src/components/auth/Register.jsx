@@ -8,7 +8,6 @@ const Register = () => {
   const [errorMessage, setErrorMessage] = useState("");
 
   const handleSubmit = (e) => {
-    e.preventDefault();
 
     if (password !== confirmPassword) {
       setErrorMessage("Passwords do not match");
