@@ -20,7 +20,7 @@ export default function Login() {
   };
 
   const handleSubmit = (event) => {   
-    event.preventDefault();
+  
     console.log("User input:", userInput);  //backend api meh set karne ke liye
     console.log("Is email:", isEmail);
     console.log("Password:", password);
