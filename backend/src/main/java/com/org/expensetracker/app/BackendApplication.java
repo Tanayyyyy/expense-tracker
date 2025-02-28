@@ -1,4 +1,4 @@
-package com.org.expensetracker.backend;
+package com.org.expensetracker.app;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
