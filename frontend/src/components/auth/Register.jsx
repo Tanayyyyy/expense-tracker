@@ -1,80 +1,86 @@
 import styles from "../../styles/Register.module.css";
 import React, { useState } from "react";
 const Register = () => {
-  const [username, setUsername] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [confirmPassword, setConfirmPassword] = useState("");
-  const [errorMessage, setErrorMessage] = useState("");
+    const [errorMessage, setErrorMessage] = useState("");
+    const [newUserDetails, setNewUserDetails] = useState({
+        username: '',
+        email: '',
+        password: '',
+        confirmPassword: '',
+    })
 
-  const handleSubmit = (e) => {
+    const handleInputChange = (e) => {
+        const { name, value } = e.target
+        setNewUserDetails((prev) => ({ ...prev, [name]: value }))
+    };
 
-    if (password !== confirmPassword) {
-      setErrorMessage("Passwords do not match");
-      return;
-    }
-
-    if (!username || !email || !password || !confirmPassword) {
-      setErrorMessage("All fields are required");
-      return;
-    }
-
-    setErrorMessage("");
-
-    console.log("Form submitted");
-    console.log("Username:", username);
-    console.log("Email:", email);
-    console.log("Password:", password);
-
-    setUsername("");
-    setEmail("");
-    setPassword("");
-    setConfirmPassword("");
-  };
-  return (
-    <>
-      <center className={styles.container}>
-        <form onSubmit={handleSubmit} className={styles.formContainer}>
-          <div className={styles.form}>
-            <h2>Registration Form</h2>
-            {errorMessage && <div>{errorMessage}</div>}
-            <input
-              type="text"
-              name="username"
-              id="username"
-              placeholder="Enter Your Full Name"
-              onChange={(e) => setUsername(e.target.value)}
-              required
-            />
-            <input
-              type="email"
-              id="email"
-              value={email}
-              placeholder="Email Address"
-              onChange={(e) => setEmail(e.target.value)}
-              required
-            />
-            <input
-              type="password"
-              id="password"
-              value={password}
-              placeholder="Set Password"
-              onChange={(e) => setPassword(e.target.value)}
-              required
-            />
-            <input
-              type="password"
-              id="confirmPassword"
-              value={confirmPassword}
-              placeholder="Confirm Password"
-              onChange={(e) => setConfirmPassword(e.target.value)}
-              required
-            />
-            <button type="submit">Register</button>
-          </div>
-        </form>
-      </center>
-    </>
-  );
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        if (newUserDetails.password !== newUserDetails.confirmPassword) {
+            setErrorMessage("Passwords do not match");
+        }
+        else {
+            console.log("Entered userdetails are:", newUserDetails);
+            // api call that will submit the newuserdetails
+            setNewUserDetails({
+                username: '',
+                email: '',
+                password: '',
+                confirmPassword: '',
+            })
+            setErrorMessage("");
+            return;
+        }
+    };
+    return (
+        <>
+            <center className={styles.container}>
+                <form onSubmit={handleSubmit} className={styles.formContainer}>
+                    <div className={styles.form}>
+                        <h2>Register</h2>
+                        {errorMessage && <div>{errorMessage}</div>}
+                        <input
+                            type="text"
+                            id="username"
+                            value={newUserDetails.username}
+                            name="username"
+                            placeholder="Enter Your Full Name"
+                            onChange={handleInputChange}
+                            required
+                        />
+                        <input
+                            type="email"
+                            id="email"
+                            value={newUserDetails.email}
+                            name="email"
+                            placeholder="Email Address"
+                            onChange={handleInputChange}
+                            required
+                        />
+                        <input
+                            type="password"
+                            id="password"
+                            value={newUserDetails.password}
+                            name="password"
+                            placeholder="Set Password"
+                            onChange={handleInputChange}
+                            required
+                        />
+                        <input
+                            type="password"
+                            id="confirmPassword"
+                            value={newUserDetails.confirmPassword}
+                            name="confirmPassword"
+                            placeholder="Confirm Password"
+                            onChange={handleInputChange}
+                            required
+                        />
+                        <button type="submit">Register</button>
+                        {errorMessage}
+                    </div>
+                </form>
+            </center>
+        </>
+    );
 };
 export default Register;

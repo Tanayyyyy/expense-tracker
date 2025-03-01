@@ -1,0 +1,35 @@
+1. User lands on Login page.
+2. User logs in (POST /login)
+    - Store token (localStorage or cookies)
+    - Store user profile (Redux + optional localStorage backup)
+    - Redirect to /dashboard
+3. Dashboard mounts
+    - useEffect triggers fetchMonthlyData (GET /expenses?month=current)
+    - Data is stored in Redux
+4. Dashboard components (Summary, Charts, Lists) all read from Redux
+5. User can filter/change month
+    - Dispatch fetchMonthlyData again with new filter
+    - Redux updates all components automatically
+
+
+src/
+|-- features/
+|   |-- auth/
+|   |   |-- LoginPage.jsx
+|   |   |-- RegisterPage.jsx
+|   |-- dashboard/
+|   |   |-- DashboardPage.jsx
+|   |   |-- components/
+|   |   |   |-- ExpenseList.jsx
+|   |   |   |-- SummaryCard.jsx
+|   |   |   |-- CategoryChart.jsx
+|   |   |-- hooks/
+|   |   |   |-- useFetchExpenses.js
+|-- store/
+|   |-- userSlice.js
+|   |-- expensesSlice.js
+|-- services/
+|   |-- authService.js
+|   |-- expensesService.js
+|-- App.jsx
+|-- main.jsx
