@@ -1,22 +1,15 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { useState } from "react";
 // import Login from './components/auth/Login'
-import Register from './components/auth/Register'
-import './App.css'
-import React from 'react'
-
+import Register from "./components/auth/Register";
+import React from "react";
+import DashBoardPage from "./components/dashboard/DashBoardPage";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      {/* <Login></Login>
-       */}
-      <Register></Register>
+      <DashBoardPage />
     </>
-  )
+  );
 }
 
-export default App
+export default App;

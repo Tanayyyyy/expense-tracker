@@ -1,11 +1,12 @@
-import React from 'react'
+import React from "react";
+import Sidebar from "../Sidebar";
 
 function DashBoardPage() {
-    return (
-        <div>
-            
-        </div>
-    )
+  return (
+    <div>
+      <Sidebar />
+    </div>
+  );
 }
 
-export default DashBoardPage
+export default DashBoardPage;
