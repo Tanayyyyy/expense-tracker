@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import styles from "../styles/Sidebar.module.css";
-import logo from "../assets/logo/logo.jpg";
+import styles from "../../styles/Sidebar.module.css";
+import logo from "../../assets/logo/logo.jpg";
 import { IoHomeOutline } from "react-icons/io5";
 import { FaRupeeSign } from "react-icons/fa";
 import { FaRegMoneyBillAlt } from "react-icons/fa";
@@ -109,7 +109,7 @@ const Sidebar = () => {
         <li className={styles.menuItem}>
           <a href="#" className={styles.anchor}>
             <AiOutlineLogout />
-            &nbsp;&nbsp; Logout
+            &nbsp;&nbsp; Login/SignUp
           </a>
         </li>
       </ul>

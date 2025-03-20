@@ -1,12 +1,7 @@
 import React from "react";
-import Sidebar from "../Sidebar";
-
-function DashBoardPage() {
-  return (
-    <div>
-      <Sidebar />
-    </div>
-  );
-}
+import styles from "../../styles/Dashboard.module.css";
+const DashBoardPage = () => {
+  return <div className={styles.container}>dashboard Page</div>;
+};
 
 export default DashBoardPage;
