@@ -1,0 +1,22 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  justify-content: end;
+  margin-bottom: 20px;
+
+  font-weight: bold;
+}
+.form label {
+  font-size: 25px;
+}
+
+.form input {
+  margin: 10px;
+  margin-left: 20px;
+}
+
+.form button {
+  margin: 10px;
+  margin-left: 20px;
+}
