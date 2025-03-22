@@ -33,6 +33,9 @@ src/
 |   |-- expensesService.js
 |-- App.jsx
 |-- main.jsx
+<<<<<<< HEAD
 
 for dashboard charts
 https://canvasjs.com/react-charts/doughnut-chart/
+=======
+>>>>>>> 61f92ac6443ae4c5c61db43d0ad56c63699685a0

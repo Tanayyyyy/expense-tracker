@@ -7,17 +7,13 @@ import './App.css'
 import React from 'react'
 import Chart from './Chart'
 
-
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
-      {/* <Login></Login>
-       */}
-      {/* <Register></Register>
-       */}
-      {/* <Chart></Chart> */}
+      {/* <Login></Login> */}
+      <Register></Register>
+      <Chart></Chart>
     </>
   )
 }
