@@ -26,7 +26,6 @@ public class UserServiceImpl implements UserService {
 
         UserEntity userEntity = UserEntity.newBuilder()
             .setUserName(requestDTO.getUserName())
-            .setPhoneNumber(requestDTO.getPhoneNumber())
             .setEmail(requestDTO.getEmail())
             .setPasswordHash(hashSHA256(requestDTO.getPassword()))
             .build();

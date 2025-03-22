@@ -2,7 +2,7 @@ spring:
   application:
     name: expensetracker
   datasource:
-    url: jdbc:mysql://localhost:3306/expensetracker
+    url: jdbc:mysql://localhost:3306/expensetracker?createDatabaseIfNotExist=true
     username: root
     password: password
     driver-class-name: com.mysql.cj.jdbc.Driver
