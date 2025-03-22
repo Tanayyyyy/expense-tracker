@@ -22,7 +22,7 @@ public class UserController {
 
     @PostMapping("/create")
     public void createUser(@RequestBody CreateUserRequestDTO requestDTO){
-        this.userService.createUser(requestDTO);
         LOGGER.info("Create user request: {}", requestDTO);
+        this.userService.createUser(requestDTO);
     }
 }
