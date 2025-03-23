@@ -1,8 +1,9 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import styles from "../../styles/Sidebar.module.css";
 import logo from "../../assets/logo/logo.jpg";
 import { IoHomeOutline } from "react-icons/io5";
-import { FaRupeeSign } from "react-icons/fa";
+// import { FaRupeeSign } from "react-icons/fa";
 import { FaRegMoneyBillAlt } from "react-icons/fa";
 import { SlCalender } from "react-icons/sl";
 import { IoSettingsOutline } from "react-icons/io5";
@@ -31,13 +32,13 @@ const Sidebar = () => {
 
       <ul className={styles.sidebarMenu}>
         <li className={styles.menuItem}>
-          <a href="#" className={styles.anchor}>
+          <Link to="/dashboard" className={styles.anchor}>
             <IoHomeOutline />
             &nbsp;&nbsp;&nbsp;Dashboard
-          </a>
+          </Link>
         </li>
 
-        <li className={styles.menuItem} onClick={toggleExpenseCollapse}>
+        {/* <li className={styles.menuItem} onClick={toggleExpenseCollapse}>
           <a href="#" className={styles.anchor}>
             <FaRupeeSign />
             &nbsp;&nbsp; Expense&nbsp;&nbsp;
@@ -46,8 +47,8 @@ const Sidebar = () => {
           <span
             className={`arrow ${isExpenseCollapsed ? "rotated" : ""}`}
           ></span>
-        </li>
-        {isExpenseCollapsed && (
+        </li> */}
+        {/* {isExpenseCollapsed && (
           <ul className={styles.submenu}>
             <li className={styles.submenuItem}>
               <a href="#" className={styles.anchor}>
@@ -60,20 +61,20 @@ const Sidebar = () => {
               </a>
             </li>
           </ul>
-        )}
+        )} */}
 
         <li className={styles.menuItem} onClick={toggleIncomeCollapse}>
-          <a href="#" className={styles.anchor}>
+          <Link to="/income" className={styles.anchor}>
             <FaRegMoneyBillAlt />
-            &nbsp;&nbsp; Income&nbsp;&nbsp;
+            &nbsp;&nbsp;Income&nbsp;&nbsp;
             <FaArrowDown />
-          </a>
+          </Link>
 
           <span
             className={`arrow ${isIncomeCollapsed ? "rotated" : ""}`}
           ></span>
         </li>
-        {isIncomeCollapsed && (
+        {/* {isIncomeCollapsed && (
           <ul className={styles.submenu}>
             <li className={styles.submenuItem}>
               <a href="#" className={styles.anchor}>
@@ -86,31 +87,31 @@ const Sidebar = () => {
               </a>
             </li>
           </ul>
-        )}
+        )} */}
 
         <li className={styles.menuItem}>
-          <a href="#" className={styles.anchor}>
+          <Link to="/calendar" className={styles.anchor}>
             <SlCalender />
             &nbsp;&nbsp; Calendar
-          </a>
+          </Link>
         </li>
         <li className={styles.menuItem}>
-          <a href="#" className={styles.anchor}>
+          <Link to="/setting" className={styles.anchor}>
             <IoSettingsOutline />
             &nbsp;&nbsp;Settings
-          </a>
+          </Link>
         </li>
         <li className={styles.menuItem}>
-          <a href="#" className={styles.anchor}>
+          <Link to="/profile" className={styles.anchor}>
             <CgProfile />
             &nbsp;&nbsp; Profile
-          </a>
+          </Link>
         </li>
         <li className={styles.menuItem}>
-          <a href="#" className={styles.anchor}>
+          <Link to="/login" className={styles.anchor}>
             <AiOutlineLogout />
-            &nbsp;&nbsp; Login/SignUp
-          </a>
+            &nbsp;&nbsp; Log Out
+          </Link>
         </li>
       </ul>
     </div>
