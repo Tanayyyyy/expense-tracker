@@ -10,11 +10,12 @@ import Profile from "./components/dashboard/Profile";
 import Login from "./components/auth/Login";
 import Register from "./components/auth/Register";
 import AddNewExpense from "./components/dashboard/AddNewExpense";
+import LoginRegister from "./utils/LoginRegister";
 function App() {
   const router = createBrowserRouter([
     {
       path: "/",
-      element: <AppLayout />,
+      element: <LoginRegister />,
       children: [],
     },
     {
@@ -30,7 +31,7 @@ function App() {
       element: <Income />,
     },
     {
-      path: "/calender ",
+      path: "/calendar",
       element: <Calender />,
     },
     {
@@ -38,7 +39,7 @@ function App() {
       element: <Setting />,
     },
     {
-      path: "/profile ",
+      path: "/profile",
       element: <Profile />,
     },
     {

@@ -1,8 +1,10 @@
 import styles from "../../styles/Login.module.css";
 import React, { useState } from "react";
+import useAuthStore from "../../context/authStore";
 
 
 export default function Login() {
+    const { login } = useAuthStore();
 
     const [userLoginCredentials, setUserLoginCredentials] = useState({
         email: '',
@@ -15,6 +17,7 @@ export default function Login() {
     };
 
     const handleSubmit = (event) => {
+        login(userLoginCredentials.usernameOrEmail, userLoginCredentials.password)
         console.log("The User input data on login page is:", userLoginCredentials)
     };
 
