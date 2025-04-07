@@ -1,0 +1,10 @@
+.mainContent {
+    margin-left: 350px;
+    /* Equal to the sidebar width */
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    color: black;
+    /* Ensure text is visible */
+    background-color: white;
+    /* Optional: Ensure contrast */
+}
