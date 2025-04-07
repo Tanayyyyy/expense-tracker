@@ -1,11 +1,11 @@
 import React from 'react'
 
-function Otp_Auth() {
+function Profile() {
     return (
         <div>
-
+            
         </div>
     )
 }
 
-export default Otp_Auth
+export default Profile
