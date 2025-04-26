@@ -16,5 +16,6 @@ export const useUIStore = create((set, get) => ({
     setCurrentColor: (value) => set({ currentColor: value }),
     setCurrentMode: (value) => set({ currentMode: value }),
     setThemeSettings: (value) => set({ themeSettings: value }),
-    handleClick: (value) => set({ isClicked: { ...initialState, [value]: true } })
+    handleClick: (value) => set({ isClicked: { ...initialState, [value]: true } }),
+    initialState: initialState
 }));

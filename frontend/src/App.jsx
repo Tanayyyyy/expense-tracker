@@ -13,14 +13,13 @@ registerLicense(import.meta.env.VITE_SYNCFUSION_LICENSE_KEY);
 const App = () => {
   const { setCurrentColor, setCurrentMode, currentMode, activeMenu, currentColor, themeSettings, setThemeSettings } = useUIStore();
   return (
-    <div className={currentMode === 'Dark' ? 'dark' : ''}>
+    <div className={currentMode === 'Dark' ? 'dark !overflow-auto' : '!overflow-auto'}>
       <BrowserRouter>
-        <div className="flex relative dark:bg-main-dark-bg ">
+        <div className="flex relative dark:bg-main-dark-bg">
           <div className="fixed right-4 bottom-4" style={{ zIndex: '1000' }}>
             <TooltipComponent
               content="Settings"
-              position="Bottom"
-
+              position="Top"
             >
               <button
                 type="button"
@@ -51,10 +50,10 @@ const App = () => {
             <div className="fixed md:static bg-main-bg dark:bg-main-dark-bg navbar w-full ">
               <Navbar />
             </div>
-            <div>
+            <div className="!overflow-auto">
               <Routes>
                 <Route path="/" element={<DashBoard />} />
-                {/* <Route path="/dashboard" element={<DashBoardPage />} /> */}
+                <Route path="/dashboard" element={<DashBoard />} />
                 <Route path="/calendar" element={<Calendar />} />
                 <Route path="/income" element={<Income />} />
                 <Route path="/profile" element={<Profile />} />

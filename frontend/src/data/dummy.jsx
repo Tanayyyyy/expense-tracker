@@ -531,7 +531,7 @@ export const links = [
       },
       {
         name: 'planner',
-        icon: <CgList  />,
+        icon: <CgList />,
         route: 'planner'
 
       },
@@ -607,27 +607,27 @@ export const chatData = [
 export const earningData = [
   {
     icon: <MdOutlineSupervisorAccount />,
-    amount: '39,354',
+    amount: 'Clothing',
     percentage: '-4%',
-    title: 'Customers',
+    title: 'Top Category',
     iconColor: '#03C9D7',
     iconBg: '#E5FAFB',
     pcColor: 'red-600',
   },
   {
     icon: <BsBoxSeam />,
-    amount: '4,396',
-    percentage: '+23%',
-    title: 'Products',
+    amount: '14',
+    percentage: '+4%',
+    title: 'No-Spend Days',
     iconColor: 'rgb(255, 244, 229)',
     iconBg: 'rgb(254, 201, 15)',
     pcColor: 'green-600',
   },
   {
     icon: <FiBarChart />,
-    amount: '423,39',
+    amount: 'Rs. 3400',
     percentage: '+38%',
-    title: 'Sales',
+    title: 'Budget Savings (Last Month)',
     iconColor: 'rgb(228, 106, 118)',
     iconBg: 'rgb(255, 244, 229)',
 
@@ -635,9 +635,9 @@ export const earningData = [
   },
   {
     icon: <HiOutlineRefresh />,
-    amount: '39,354',
+    amount: 'Rs. 3,354',
     percentage: '-12%',
-    title: 'Refunds',
+    title: 'Upcoming Bills and EMIs',
     iconColor: 'rgb(0, 194, 146)',
     iconBg: 'rgb(235, 250, 242)',
     pcColor: 'red-600',
@@ -3146,10 +3146,10 @@ export const contextMenuItems = [
 ];
 
 export const ecomPieChartData = [
-  { x: '2018', y: 18, text: '35%' },
-  { x: '2019', y: 18, text: '15%' },
-  { x: '2020', y: 18, text: '25%' },
-  { x: '2021', y: 18, text: '25%' },
+  { x: 'Shopping', y: 30, text: 'Shopping' },
+  { x: 'EMI and Bills', y: 20, text: 'EMI & Bills' },
+  { x: 'Food and Rent', y: 35, text: 'Food & Rent' },
+  { x: 'Misc', y: 15, text: 'Misc' },
 ];
 
 export const stackedChartData = [
