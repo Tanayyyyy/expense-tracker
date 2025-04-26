@@ -10,7 +10,7 @@ const Sidebar = () => {
   const { activeMenu, setActiveMenu, currentColor } = useUIStore()
   const handleCloseSideBar = () => {
     if (activeMenu !== undefined && screenSize <= 900) {
-      setActiveMenu(false);
+      setActiveMenu(!activeMenu);
     }
   }
   const activeLink = 'flex items-center gap-5 pl-4 pt-3 pb-2.5 rounded-lg  text-white  text-md m-2';
@@ -21,7 +21,7 @@ const Sidebar = () => {
       {activeMenu && (
         <>
           <div className="flex justify-between items-center">
-            <Link to="/" onClick={() => { setActiveMenu(false) }} className="items-center gap-3 ml-3 mt-4 flex text-xl font-extrabold tracking-tight dark:text-white text-slate-900">
+            <Link to="/" onClick={() => { handleCloseSideBar }} className="items-center gap-3 ml-3 mt-4 flex text-xl font-extrabold tracking-tight dark:text-white text-slate-900">
               <SiExpensify className='text-black' /> <span className='text-black'>Xpenso</span>
             </Link>
             <TooltipComponent content="Menu" position="BottomCenter">

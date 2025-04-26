@@ -45,7 +45,7 @@ const Navbar = () => {
     }
   }, [screenSize]);
   return (
-    <div className="flex justify-between p-2 md:ml-6 md:mr-6 relative ">
+    <div className="flex z-1000 justify-between p-2 md:ml-6 md:mr-6 relative ">
       <NavButton title="Menu" customFunc={handleActiveMenu} color={currentColor} icon={<AiOutlineMenu />} />
       <div className="flex">
         <NavButton title="Notification" dotColor="rgb(254, 201, 15)" customFunc={() => handleClick('notification')} color={currentColor} icon={<RiNotification3Line />} />
